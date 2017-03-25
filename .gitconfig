@@ -1,0 +1,13 @@
+[user]
+    email = schuler.maximilian@gmail.com
+    name = max
+[core]
+    editor = "vim"
+[alias]
+    s = status
+    c = commit -v
+    u = push -u origin master
+    p = pull --rebase
+    f = commit --amend
+    r = rebase --interactive
+    a = add
