@@ -1,13 +1,17 @@
-[user]
-    email = schuler.maximilian@gmail.com
-    name = max
 [core]
-    editor = "vim"
+  editor = vim
+[user]
+  email = schuler.maximilian@gmail.com
+  name = Maximilian Schuler
+[includeIf "gitdir:~/workspace/itemis/"]
+  path = .gitconfig-work
+[includeIf "gitdir:~/workspace/otto/"]
+  path = .gitconfig-otto
 [alias]
-    s = status
-    c = commit -v
-    u = push -u origin master
-    p = pull --rebase
-    f = commit --amend
-    r = rebase --interactive
-    a = add
+  s = status
+  c = commit -v
+  u = push -u origin master
+  p = pull --rebase
+  f = commit --amend
+  r = rebase --interactive
+  a = add
