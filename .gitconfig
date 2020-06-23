@@ -1,12 +1,13 @@
 [core]
   editor = vim
+	excludesfile = /Users/max/.gitignore_global
 [user]
   email = schuler.maximilian@gmail.com
   name = Maximilian Schuler
 [includeIf "gitdir:~/workspace/itemis/"]
   path = .gitconfig-work
-[includeIf "gitdir:~/workspace/otto/"]
-  path = .gitconfig-otto
+[includeIf "gitdir:~/workspace/audi/"]
+  path = .gitconfig-audi
 [alias]
   s = status
   c = commit -v
@@ -15,3 +16,11 @@
   f = commit --amend
   r = rebase --interactive
   a = add
+  l = log
+  t = log --graph --pretty=oneline
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
